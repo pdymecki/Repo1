@@ -1,0 +1,8 @@
+<mvc:View controllerName="custom.controller.empty" xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    height="100%"
+    >
+   
+</mvc:View>

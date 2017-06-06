@@ -1,0 +1,157 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="custom.controller.SmartTable">
+		<!-- use this to make the table occupy the available screen height -->
+		<semantic:FullscreenPage
+		id="page"
+        semanticRuleSet="Optimized"
+		title="Objects">
+				<semantic:content>
+			<Table
+				id="list"
+				width="auto"
+				class="sapUiResponsiveMargin"
+				items="{
+					path: '/ZCUSTSet'
+					
+				}"
+				noDataText="{worklistView>/tableNoDataText}"
+				busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished">
+
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer />
+						<SearchField
+							id="searchField"
+							tooltip="{i18n>worklistSearchTooltip}"
+							search="filterGlobally"
+							width="auto">
+						</SearchField>
+					</Toolbar>
+				</headerToolbar>
+
+				<columns>
+					<Column id="nameColumn">
+						<Text text="Business Area" id="nameColumnTitle"/>
+					</Column>
+			
+					
+				
+				
+					<Column id="process">
+						<Text text="Process" id="process_title"/>
+					</Column>
+					
+					
+					<Column id="process_step">
+						<Text text="Process Step" id="process_step_title"/>
+					</Column>
+					
+					<Column id="work_package">
+						<Text text="Work package" id="work_package_title"/>
+					</Column>
+					
+					<Column id="work_package_description">
+						<Text text="Work Package Decsription" id="work_package_description_title"/>
+					</Column>
+					
+					
+					
+					<Column id="ricefw">
+						<Text text="RICEFW" id="ricefw_title"/>
+					</Column>
+					
+					
+					
+					<Column id="description">
+						<Text text="Description" id="description_title"/>
+					</Column>
+					
+					
+					
+					
+					
+					
+					<Column id="go_live_m">
+						<Text text="Go Live Release Month" id="go_live_m_title"/>
+					</Column>
+					
+					<Column id="go_live_y">
+						<Text text="Go Live Release Year" id="go_live_y_title"/>
+					</Column>
+					
+					
+					
+				</columns>
+				
+
+				<items>
+					<ColumnListItem
+						type="Navigation"
+						press="onPress">
+						<cells>
+							<ObjectIdentifier
+								title="{Businessprocess}"/>
+						</cells>
+					
+					
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Processstep}"/>
+						</cells>
+					
+					
+						<cells>
+							<ObjectIdentifier
+								title="{Description}"/>
+						</cells>
+					
+						<cells>
+							<ObjectIdentifier
+								title="{Ricef}"/>
+						</cells>
+						
+						
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Components}"/>
+						</cells>
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Rational}"/>
+						</cells>
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Syst}"/>
+						</cells>
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Source}"/>
+						</cells>
+						
+						<cells>
+							<ObjectIdentifier
+								title="{Comments}"/>
+						</cells>
+						
+						
+						
+					</ColumnListItem>
+				</items>
+			</Table>
+		</semantic:content>
+	
+		</semantic:FullscreenPage>
+</core:View>
